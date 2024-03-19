@@ -34,6 +34,7 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
+            linkLabel1 = new LinkLabel();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -84,12 +85,24 @@
             label4.TabIndex = 4;
             label4.Text = "License: MIT";
             // 
-            // About
+            // linkLabel1
+            // 
+            linkLabel1.AutoSize = true;
+            linkLabel1.Location = new Point(253, 167);
+            linkLabel1.Name = "linkLabel1";
+            linkLabel1.Size = new Size(233, 15);
+            linkLabel1.TabIndex = 5;
+            linkLabel1.TabStop = true;
+            linkLabel1.Text = "https://github.com/billsecond/SMTPDiag2";
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
+            // 
+            // frmAbout
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(224, 224, 224);
             ClientSize = new Size(594, 208);
+            Controls.Add(linkLabel1);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -99,7 +112,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
-            Name = "About";
+            Name = "frmAbout";
             Text = "About";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
@@ -113,5 +126,6 @@
         private Label label2;
         private Label label3;
         private Label label4;
+        private LinkLabel linkLabel1;
     }
 }
